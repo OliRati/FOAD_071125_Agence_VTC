@@ -3,7 +3,7 @@ import { baseVehiculesDisponibles } from "./base-vehicules-disponibles.js";
 // Au demarrage, tri par ordre croissant de prix
 
 let sortOrder = 0;  // 0 -> Tri croissant
-                    // 1 -> Tri decroissant
+// 1 -> Tri decroissant
 
 let sortAvailCars = baseVehiculesDisponibles;
 sortAvailCars.sort((a, b) => (a.prix - b.prix));
@@ -42,7 +42,7 @@ function updateAvailableCars() {
         /* Creation de l'image du vehicule */
         const div2 = document.createElement('div');
         const img2 = document.createElement('img');
-        img2.src = vehicule.url;
+        img2.src = vehicule.urls[0];
         div2.append(img2);
         photosVehicule.append(div2);
 
@@ -101,6 +101,27 @@ function updateAvailableCars() {
 
         // Ajout de l'article dans la page
         articlesContainer.append(article);
+
+        let currentVehicule = 0;
+
+        div1.addEventListener('click', () => {
+            console.log('prev');
+            currentVehicule++;
+            if (currentVehicule >= vehicule.urls.length)
+                currentVehicule = 0;
+
+            img2.src = vehicule.urls[currentVehicule];
+        });
+
+        div3.addEventListener('click', () => {
+            console.log('next');
+            currentVehicule--;
+            if (currentVehicule < 0)
+                currentVehicule = vehicule.urls.length - 1;
+
+            img2.src = vehicule.urls[currentVehicule];
+        });
+
     });
 };
 
@@ -137,7 +158,7 @@ const backgroundUrls = [
 
 let currentBackgroundIndex = 0;
 
-setInterval(()=>{
+setInterval(() => {
     currentBackgroundIndex++;
     if (currentBackgroundIndex >= backgroundUrls.length)
         currentBackgroundIndex = 0;
@@ -148,12 +169,12 @@ setInterval(()=>{
 
 /* Gestion de l'affichage du menu */
 
-const menuItems = ["Louer une voiture","Louer un utilitaire","Réserver un chauffeur","Découvrez nos agences","Mon Compte","Contact"];
+const menuItems = ["Louer une voiture", "Louer un utilitaire", "Réserver un chauffeur", "Découvrez nos agences", "Mon Compte", "Contact"];
 
 const hamburgerMenu = document.getElementById('hamburger-menu');
 let hamburgerMenuShown = false;
 
-hamburgerMenu.addEventListener('click', ()=>{
+hamburgerMenu.addEventListener('click', () => {
     const hamburgerMenuContent = document.getElementById('hambuger-menu-content');
 
     hamburgerMenuShown = !hamburgerMenuShown;
@@ -162,7 +183,7 @@ hamburgerMenu.addEventListener('click', ()=>{
         hamburgerMenu.classList.add('hamburger-active');
         hamburgerMenu.classList.remove('hamburger-inactive');
 
-        menuItems.forEach(item=>{
+        menuItems.forEach(item => {
             const li = document.createElement('li');
             li.innerText = item;
             hamburgerMenuContent.append(li);
