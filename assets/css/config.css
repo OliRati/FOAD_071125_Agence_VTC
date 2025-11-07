@@ -1,0 +1,19 @@
+/* This file define default configs for the site */
+
+/* Get font */
+@font-face {
+    font-family: 'montserrat';
+    src: url('../font/Montserrat-VariableFont_wght.ttf');
+}
+
+/* Apply it everywhere */
+* {
+    font-family: 'montserrat';
+}
+
+/* Define used colors */
+:root {
+    --color-button: rgb(89, 180, 89);
+    --color-button-transparent: rgba(89, 180, 89, 0.7);
+    --color-white-transparent: rgba(255, 255, 255, 0.7);
+}

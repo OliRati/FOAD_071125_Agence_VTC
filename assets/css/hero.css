@@ -1,0 +1,161 @@
+/* This is the CSS for the Hero */
+
+#hero {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hamburger-menu {
+    position: absolute;
+    padding: 0.1rem 0.2rem 0 0.2rem;
+    border: 2px solid white;
+    border-radius: 0.2rem;
+    right: 1rem;
+    top: 1rem;
+
+    img {
+        width: 2rem;
+    }
+}
+
+#hamburger-menu:hover {
+    color: light-gray;
+    background-color: var(--color-white-transparent);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#acceuil {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 2rem;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
+#title {
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+#subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+#formulaire {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    #formulaire-left {
+        background-color: var(--color-white-transparent);
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type='date']:not(:focus) {
+        color: gray;
+        content: attr(placeholder);
+    }
+
+    #formulaire-right {}
+
+    select,
+    input[type='date'],
+    input[type='submit'] {
+        width: 90vw;
+    }
+
+    select:hover,
+    input[type='date']:hover,
+    input[type='submit']:hover {
+        cursor: pointer;
+    }
+
+    select,
+    input[type='date'] {
+        background-color: #ddd;
+        color: black;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    select {
+        margin-left: 0.5rem;
+    }
+
+    input[type='submit'] {
+        background-color: var(--color-button-transparent);
+        border: none;
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        font-weight: 700;
+    }
+
+    input[type='submit']:hover {
+        transition: all 0.3s;
+        background-color: var(--color-button);
+        color: lightgray;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: red;
+    }
+
+    #formulaire {
+        #formulaire-left {
+            flex-direction: row;
+        }
+
+        select,
+        input[type='date'] {
+            width: 25vw;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+
+    #formulaire {
+        flex-direction: row;
+
+        #formulaire-right {
+            width: 20vw;
+            max-width: 15rem;
+        }
+
+        select,
+        input[type='date'],
+        input[type='submit'] {
+            width: 20vw;
+            max-width: 15rem;
+        }
+
+        select,
+        input[type='date'] {
+            margin-left: 0;
+            margin-right: 5vw;
+        }
+    }
+}
