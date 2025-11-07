@@ -1,4 +1,5 @@
-#articles-container {
+#articles-container,
+#resultats-container {
     width: 96vw;
     margin: 0 auto;
     margin-top: 2rem;
@@ -83,7 +84,8 @@ article {
 
 
 @media screen and (min-width: 576px) {
-    #articles-container {
+    #articles-container,
+    #resultats-container {
         width: 92vw;
     }
 
@@ -98,7 +100,8 @@ article {
 }
 
 @media screen and (min-width: 1024px) {
-    #articles-container {
+    #articles-container,
+    #resultats-container {
         width: 80vw;
     }
 }

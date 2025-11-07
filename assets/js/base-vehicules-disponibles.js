@@ -21,7 +21,7 @@ export const baseVehiculesDisponibles = [
         agence: 'Agence de Paris'
     },
     {
-        url: 'assets/img/vehicule4.png',
+        url: 'assets/img/vehicule3.png',
         modele: 'Opel Mokka',
         description: 'Diesel, 5 portes, GPS, AutoRadio, Forfait 1000 km (0,4/km supplémentaire).',
         prix: 1150,
