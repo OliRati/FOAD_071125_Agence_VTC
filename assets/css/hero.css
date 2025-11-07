@@ -146,8 +146,11 @@
 
         select,
         input[type='date'] {
-            margin-left: 0;
             margin-right: 5vw;
+        }
+
+        input[type='date'] {
+            margin-left: 0;
         }
     }
 }
