@@ -7,25 +7,31 @@
     <title>Agence VTC</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type="module" src="./assets/js/script.js"></script>
+    <link rel="shortcut icon" href="./assets/icon/bienvenue_a_bord.ico" type="image/x-icon">
 </head>
 
 <body>
-
     <head>
         <div id="hero">
+            <div id="hamburger-menu">
+                <img src="./assets/icon/hamburger-menu.svg" alt="">
+            </div>
             <div id="acceuil">
-                <div id="title">Bienvenue à bord</div>
+                <h1 id="title">Bienvenue à bord</h1>
                 <div id="subtitle">Location de voiture 24h/24 et 7j/7</div>
             </div>
 
             <form action="">
                 <div id="formulaire">
-                    <div><select name="adresse" id="adresse">
-                            <option>Paris 15e</option>
-                        </select></div>
-                    <div><input type="date" name="starttime" id="starttime" placeholder="Début de location"></div>
-                    <div><input type="date" name="stoptime" id="stoptime" placeholder="Fin de location"></div>
-                    <div><input type="submit" value="Valider ma recherche"></div>
+                    <div id="formulaire-left">
+                        <div><select name="adresse" id="adresse">
+                                <option value="" disabled selected>Adresse de départ</option>
+                                <option value="paris-15">Paris 15e</option>
+                            </select></div>
+                        <div><input type="date" name="starttime" id="starttime" placeholder="Début de location"></div>
+                        <div><input type="date" name="stoptime" id="stoptime" placeholder="Fin de location"></div>
+                    </div>
+                    <div id="formulaire-right"><input type="submit" value="Valider ma recherche"></div>
                 </div>
             </form>
         </div>
