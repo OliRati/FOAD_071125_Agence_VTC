@@ -1,10 +1,11 @@
 import { baseVehiculesDisponibles } from "./base-vehicules-disponibles.js";
 
 const articlesContainer = document.getElementById('articles-container');
+const nombreResultats = document.getElementById('nombre-resultats');
+
+nombreResultats.innerText = baseVehiculesDisponibles.length.toString();
 
 baseVehiculesDisponibles.forEach((vehicule) => {
-    console.log('Have : ' + vehicule.modele);
-
     const article = document.createElement('article');
 
     /*
@@ -84,3 +85,5 @@ baseVehiculesDisponibles.forEach((vehicule) => {
     articlesContainer.append(article);
 });
 
+
+const 
