@@ -33,6 +33,7 @@ function updateAvailableCars() {
 
         /* Creation de la fleche de gauche */
         const div1 = document.createElement('div');
+        div1.classList.add('prev');
         const img1 = document.createElement('img');
         img1.src = "./assets/icon/arrow_left.svg";
         div1.append(img1);
@@ -47,6 +48,7 @@ function updateAvailableCars() {
 
         /* Creation de la fleche de droite */
         const div3 = document.createElement('div');
+        div3.classList.add('next');
         const img3 = document.createElement('img');
         img3.src = "./assets/icon/arrow_right.svg";
         div3.append(img3);
