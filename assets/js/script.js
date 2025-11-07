@@ -2,8 +2,6 @@ import { baseVehiculesDisponibles } from "./base-vehicules-disponibles.js";
 
 const articlesContainer = document.getElementById('articles-container');
 
-console.log('merde');
-
 baseVehiculesDisponibles.forEach((vehicule) => {
     console.log('Have : ' + vehicule.modele);
 
