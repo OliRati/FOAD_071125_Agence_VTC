@@ -1,0 +1,103 @@
+#articles-container {
+    width: 96vw;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+#resultats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    div:nth-child(1) {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    #sort-select {
+        padding: 0.5rem;
+    }
+}
+
+article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photos-vehicule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    div:nth-child(1),
+    div:nth-child(3) {
+        img {
+            width: 3rem;
+        }
+    }
+}
+
+.modele {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.description {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+
+.prix-agence {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    .prix {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .agence {
+        font-size: 0.8rem;
+    }
+
+    div:nth-child(2) {
+        margin: 0 0.5rem;
+    }
+}
+
+.reserver {
+    background-color: var(--color-button);
+    padding: 0.5rem;
+    border: 1ps solid gray;
+    border-radius: 0.2rem;
+    color: white;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 576px) {
+    #articles-container {
+        width: 92vw;
+    }
+
+    article {
+        flex-direction: row;
+    }
+
+    .photos-vehicule {
+        margin-left: 0;
+        margin-right: 5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #articles-container {
+        width: 80vw;
+    }
+}

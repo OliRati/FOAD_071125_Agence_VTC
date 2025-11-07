@@ -8,3 +8,29 @@
 
 /* Partie du CSS pour le Hero */
 @import url('./hero.css');
+
+/* Partie du CSS pour les articles */
+@import url('./articles.css');
+
+/* Here start footer */
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+
+    div:nth-child(1) {
+        width: 9rem;
+        margin-right: 4rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin: 0.2rem 0;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

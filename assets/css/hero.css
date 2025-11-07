@@ -116,10 +116,6 @@
 }
 
 @media screen and (min-width: 576px) {
-    body {
-        background-color: red;
-    }
-
     #formulaire {
         #formulaire-left {
             flex-direction: row;
@@ -133,10 +129,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    body {
-        background-color: blue;
-    }
-
     #formulaire {
         flex-direction: row;
 
