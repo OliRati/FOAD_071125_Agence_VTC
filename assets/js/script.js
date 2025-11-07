@@ -124,3 +124,50 @@ sortSelector.addEventListener('change', () => {
     updateAvailableCars(sortAvailCars);
 });
 
+
+/* Gestion du changement du background du hero toutes les 15 secondes */
+
+const backgroundUrls = [
+    './assets/img/background.jpg',
+    './assets/img/background1.jpg',
+    './assets/img/background2.jpg'
+]
+
+let currentBackgroundIndex = 0;
+
+setInterval(()=>{
+    currentBackgroundIndex++;
+    if (currentBackgroundIndex >= backgroundUrls.length)
+        currentBackgroundIndex = 0;
+
+    const backgroundimg = document.getElementById('hero');
+    backgroundimg.style.backgroundImage = `url("${backgroundUrls[currentBackgroundIndex]}")`;
+}, 15000);
+
+/* Gestion de l'affichage du menu */
+
+const menuItems = ["Louer une voiture","Louer un utilitaire","Réserver un chauffeur","Découvrez nos agences","Mon Compte","Contact"];
+
+const hamburgerMenu = document.getElementById('hamburger-menu');
+let hamburgerMenuShown = false;
+
+hamburgerMenu.addEventListener('click', ()=>{
+    const hamburgerMenuContent = document.getElementById('hambuger-menu-content');
+
+    hamburgerMenuShown = !hamburgerMenuShown;
+
+    if (hamburgerMenuShown) {
+        hamburgerMenu.classList.add('hamburger-active');
+        hamburgerMenu.classList.remove('hamburger-inactive');
+
+        menuItems.forEach(item=>{
+            const li = document.createElement('li');
+            li.innerText = item;
+            hamburgerMenuContent.append(li);
+        });
+    } else {
+        hamburgerMenuContent.innerText = '';
+        hamburgerMenu.classList.add('hamburger-inactive')
+        hamburgerMenu.classList.remove('hamburger-active');
+    }
+});

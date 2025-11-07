@@ -22,11 +22,40 @@
     }
 }
 
-#hamburger-menu:hover {
-    color: light-gray;
+.hamburger-active,
+.hamburger-inactive:hover {
+    color: lightgray;
     background-color: var(--color-white-transparent);
-    transition: all 0.3s;
+}
+
+.hamburger-active:hover,
+.hamburger-inactive {
+    color: white;
+    background-color: unset;
+}
+
+.hamburger-inactive:hover,
+.hamburger-active:hover {
     cursor: pointer;
+}
+
+
+#hambuger-menu-content {
+    z-index: 1;
+    position: absolute;
+    top: 4rem;
+    width: 100vw;
+    background-color: white;
+
+    li {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    li:hover {
+        background-color: lightgray;
+        cursor: pointer;
+    }
 }
 
 #acceuil {

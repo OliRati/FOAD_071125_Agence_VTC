@@ -75,13 +75,18 @@ article {
 .reserver {
     background-color: var(--color-button);
     padding: 0.5rem;
-    border: 1ps solid gray;
+    border: 1px solid gray;
     border-radius: 0.2rem;
     color: white;
     font-weight: 700;
     margin-top: 1rem;
 }
 
+.reserver:hover {
+    transition: all 0.3s;
+    color: lightgray;
+    cursor: pointer;
+}
 
 @media screen and (min-width: 576px) {
     #articles-container,
