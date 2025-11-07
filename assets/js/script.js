@@ -105,7 +105,6 @@ function updateAvailableCars() {
         let currentVehicule = 0;
 
         div1.addEventListener('click', () => {
-            console.log('prev');
             currentVehicule++;
             if (currentVehicule >= vehicule.urls.length)
                 currentVehicule = 0;
@@ -114,7 +113,6 @@ function updateAvailableCars() {
         });
 
         div3.addEventListener('click', () => {
-            console.log('next');
             currentVehicule--;
             if (currentVehicule < 0)
                 currentVehicule = vehicule.urls.length - 1;
