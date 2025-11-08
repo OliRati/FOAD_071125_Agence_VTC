@@ -161,8 +161,17 @@ setInterval(() => {
     if (currentBackgroundIndex >= backgroundUrls.length)
         currentBackgroundIndex = 0;
 
-    const backgroundimg = document.getElementById('hero');
-    backgroundimg.style.backgroundImage = `url("${backgroundUrls[currentBackgroundIndex]}")`;
+    const behindImg = document.getElementById('behind-img');
+    const topImg = document.getElementById('top-img');
+
+    behindImg.src = backgroundUrls[currentBackgroundIndex];
+    topImg.classList.add('transition-img');
+
+    setTimeout(()=>{
+        topImg.src = backgroundUrls[currentBackgroundIndex];
+        topImg.classList.remove('transition-img');
+    },1000);
+
 }, 15000);
 
 /* Gestion de l'affichage du menu */
