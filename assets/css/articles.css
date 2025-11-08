@@ -1,3 +1,7 @@
+/*
+ * This is the CSS for the article Section
+ */
+
 #articles-container,
 #resultats-container {
     width: 96vw;
@@ -19,6 +23,8 @@
         padding: 0.5rem;
     }
 }
+
+/* Mise en forme d'un article */
 
 article {
     display: flex;
@@ -62,7 +68,6 @@ article {
     font-size: 0.8rem;
 }
 
-
 .prix-agence {
     margin-top: 0.5rem;
     display: flex;
@@ -82,6 +87,8 @@ article {
     }
 }
 
+/* Bouton Reserver */
+
 .reserver {
     background-color: var(--color-button);
     padding: 0.5rem;
@@ -97,6 +104,8 @@ article {
     color: lightgray;
     cursor: pointer;
 }
+
+/* Here start Responsiveness tricks */
 
 @media screen and (min-width: 576px) {
 

@@ -1,4 +1,6 @@
-/* This is the CSS for the Hero */
+/*
+ * This is the CSS for the Hero section
+ */
 
 #hero {
     position: relative;
@@ -40,6 +42,8 @@
     }
 }
 
+/* Hamburger Menu animation */
+
 .hamburger-active,
 .hamburger-inactive:hover {
     color: lightgray;
@@ -58,6 +62,8 @@
     transition: all .3s;
 }
 
+/* Overlay Menu */
+
 #hambuger-menu-content {
     z-index: 1;
     position: absolute;
@@ -75,6 +81,8 @@
         cursor: pointer;
     }
 }
+
+/* Overlay title and subtitle */
 
 #acceuil {
     position: absolute;
@@ -99,6 +107,8 @@
     font-weight: 500;
     margin-top: 0.5rem;
 }
+
+/* Overlay Call to Action Form */
 
 #formulaire {
     display: flex;
@@ -162,11 +172,13 @@
     }
 }
 
+/* Here start Responsiveness tricks */
+
 @media screen and (min-width: 576px) {
     #acceuil {
         top: 4rem;
     }
-    
+
     #title {
         font-size: 2.7rem;
     }
