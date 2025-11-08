@@ -21,15 +21,18 @@ export const baseVehiculesDisponibles = [
         agence: 'Agence de Paris'
     },
     {
-        urls: ['assets/img/vehicule3.png'],
+        urls: ['assets/img/vehicule3-4.png', 'assets/img/vehicule3-5.png',
+            'assets/img/vehicule3-1.png', 'assets/img/vehicule3-2.png',
+            'assets/img/vehicule3-3.png'],
         modele: 'Opel Mokka',
         description: 'Diesel, 5 portes, GPS, AutoRadio, Forfait 1000 km (0,4/km supplémentaire).',
         prix: 1150,
         agence: 'Agence de Paris'
     },
     {
-        urls: ['assets/img/vehicule5-1.png', 'assets/img/vehicule5-2.png', 'assets/img/vehicule5-3.png',
-            'assets/img/vehicule5-4.png', 'assets/img/vehicule5-5.png'],
+        urls: ['assets/img/vehicule5-4.png', 'assets/img/vehicule5-5.png',
+            'assets/img/vehicule5-1.png', 'assets/img/vehicule5-2.png',
+            'assets/img/vehicule5-3.png'],
         modele: 'Audi A4',
         description: 'Diesel, 5 portes, GPS, AutoRadio, Forfait 1000 km (0,4/km supplémentaire).',
         prix: 1229,
