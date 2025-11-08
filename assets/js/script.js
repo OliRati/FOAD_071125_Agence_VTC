@@ -170,9 +170,14 @@ setInterval(() => {
 const menuItems = ["Louer une voiture", "Louer un utilitaire", "Réserver un chauffeur", "Découvrez nos agences", "Mon Compte", "Contact"];
 
 const hamburgerMenu = document.getElementById('hamburger-menu');
+
+/*
+ * Switch overlay menu state Shown / Hidden
+ */
+
 let hamburgerMenuShown = false;
 
-hamburgerMenu.addEventListener('click', () => {
+function switchMenuShown() {
     const hamburgerMenuContent = document.getElementById('hambuger-menu-content');
 
     hamburgerMenuShown = !hamburgerMenuShown;
@@ -181,14 +186,27 @@ hamburgerMenu.addEventListener('click', () => {
         hamburgerMenu.classList.add('hamburger-active');
         hamburgerMenu.classList.remove('hamburger-inactive');
 
+        const ul = document.createElement('ul');
+
         menuItems.forEach(item => {
             const li = document.createElement('li');
             li.innerText = item;
-            hamburgerMenuContent.append(li);
+            ul.append(li);
+
+            // Remove overlay menu when an item has been clicked
+            li.addEventListener('click', () => {
+                switchMenuShown();
+            })
         });
+
+        hamburgerMenuContent.append(ul);
     } else {
         hamburgerMenuContent.innerText = '';
         hamburgerMenu.classList.add('hamburger-inactive')
         hamburgerMenu.classList.remove('hamburger-active');
     }
+}
+
+hamburgerMenu.addEventListener('click', () => {
+    switchMenuShown();
 });

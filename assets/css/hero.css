@@ -3,10 +3,11 @@
 #hero {
     position: relative;
     width: 100vw;
-    height: 400px;
+    height: 450px;
     background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 #hamburger-menu {
@@ -14,11 +15,11 @@
     padding: 0.1rem 0.2rem 0 0.2rem;
     border: 2px solid white;
     border-radius: 0.2rem;
-    right: 1rem;
-    top: 1rem;
+    right: 0.5rem;
+    top: 0.5rem;
 
     img {
-        width: 2rem;
+        width: 1.5rem;
     }
 }
 
@@ -39,7 +40,6 @@
     cursor: pointer;
     transition: all .3s;
 }
-
 
 #hambuger-menu-content {
     z-index: 1;
@@ -66,19 +66,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 2rem;
+    top: 3rem;
     left: 50vw;
     transform: translate(-50%, 0);
 }
 
 #title {
-    font-size: 2.7rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-wrap: nowrap;
 }
 
 #subtitle {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 500;
     margin-top: 0.5rem;
 }
@@ -146,6 +146,18 @@
 }
 
 @media screen and (min-width: 576px) {
+    #acceuil {
+        top: 4rem;
+    }
+    
+    #title {
+        font-size: 2.7rem;
+    }
+
+    #subtitle {
+        font-size: 1.1rem;
+    }
+
     #formulaire {
         #formulaire-left {
             flex-direction: row;
@@ -154,6 +166,15 @@
         select,
         input[type='date'] {
             width: 25vw;
+        }
+    }
+
+    #hamburger-menu {
+        right: 1rem;
+        top: 1rem;
+
+        img {
+            width: 2rem;
         }
     }
 }
