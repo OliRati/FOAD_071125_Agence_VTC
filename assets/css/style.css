@@ -48,3 +48,18 @@
         }
     }
 }
+
+/* Here start Infinite Scroll */
+
+.loading {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.emptycontainer {
+    width: 100%;
+    height: 10rem;
+    background-color: #EEE;
+    margin: 1rem 0;
+}
