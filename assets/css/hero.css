@@ -135,6 +135,7 @@
     input[type='date'],
     input[type='submit'] {
         width: 90vw;
+        border-radius: 0.2rem;
     }
 
     select:hover,

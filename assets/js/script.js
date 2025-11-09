@@ -4,9 +4,9 @@ import { baseVehiculesDisponibles } from "./base-vehicules-disponibles.js";
 let nextCarIndex = 0;
 
 // Au demarrage, tri par ordre croissant de prix
-
-let sortOrder = 0;  // 0 -> Tri croissant
-// 1 -> Tri decroissant
+//    0 -> Tri croissant
+//    1 -> Tri decroissant
+let sortOrder = 0;
 
 let sortAvailCars = baseVehiculesDisponibles;
 sortAvailCars.sort((a, b) => (a.prix - b.prix));
@@ -16,11 +16,17 @@ sortAvailCars.sort((a, b) => (a.prix - b.prix));
 const articlesContainer = document.getElementById('articles-container');
 const nombreResultats = document.getElementById('nombre-resultats');
 
+/*
+ * Ajout de la structure d'un article dans le DOM
+ * Correspondant a un vehicule disponible
+ */
+
 function addVehiculeToList(vehicule) {
+    // Creation d'un nouvel article
     const article = document.createElement('article');
 
     /*
-     * Creation de la zone d'affichage du vehicule
+     * Creation de la zone d'affichage des images d'un vehicule
      */
 
     const photosVehicule = document.createElement('div');

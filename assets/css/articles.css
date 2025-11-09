@@ -21,6 +21,17 @@
 
     #sort-select {
         padding: 0.5rem;
+        border: 1px solid #CCCCCC;
+        background-color: #FBFBFB;
+        border-radius: 0.2rem;
+        color: #333333;
+    }
+
+    #sort-select:hover {
+        background-color: lightgray;
+        color: black;
+        cursor: pointer;
+        transition: all 0.3s;
     }
 }
 
@@ -54,6 +65,7 @@ article {
         img {
             border-radius: 0.2rem;
             background-color: #EEE;
+            transition: all 0.3s;
         }
     }
 }
