@@ -124,12 +124,11 @@
         flex-direction: column;
     }
 
+    #formulaire-right {}
+
     input[type='date']:not(:focus) {
         color: gray;
-        content: attr(placeholder);
     }
-
-    #formulaire-right {}
 
     select,
     input[type='date'],
